@@ -1,6 +1,18 @@
 #include "ComplexNumber.hpp"
 namespace ComplexLibrary{
 
+bool operator==(const Complex &c1, const Complex &c2)
+{
+    double tol=1e-16;
+    bool c;
+    if((c1.Reale-c2.Reale)<tol && (c1.Immaginaria-c2.Immaginaria)<tol)
+        c=true;
+    else
+        c=false;
+    return c;
+}
+
+
 ostream& operator<<(ostream& os, const Complex &c)
 {
     if (c.Reale==0)
@@ -17,17 +29,6 @@ ostream& operator<<(ostream& os, const Complex &c)
 Complex operator+(const Complex &c1, const Complex &c2)
 {
     Complex  c(c1.Reale+c2.Reale, c1.Immaginaria+c2.Immaginaria);
-    return c;
-}
-
-bool operator==(const Complex &c1, const Complex &c2)
-{
-    double tol=1e-16;
-    bool c;
-    if((c1.Reale-c2.Reale)<tol && (c1.Immaginaria-c2.Immaginaria)<tol)
-        c=true;
-    else
-        c=false;
     return c;
 }
 
