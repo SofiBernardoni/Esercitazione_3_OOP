@@ -13,12 +13,18 @@ int main()
     cout << "c2: " << c2 <<endl;
     ComplexLibrary::Complex c3(4,10);
     cout << "c3: " << c3 << endl;
-
+    ComplexLibrary::Complex c4(8,-50);
+    cout << "c4: "<< c4 << endl;
 
     ComplexLibrary::Complex d;
-    d=coniugato(c1);
+    d=coniugato(c3);
 
-    cout << "il coniugato di c1 è: " << d << endl;
+    ComplexLibrary::Complex f;
+    f=coniugato(c4);
+
+    cout << "il coniugato di c3 è: " << d << endl;
+
+    cout << "il coniugato di c4 è: " << f << endl;
 
     cout << "la somma di c1 e c2 è: " << c1+c2 << endl;
 

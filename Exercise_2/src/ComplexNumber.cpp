@@ -7,8 +7,10 @@ ostream& operator<<(ostream& os, const Complex &c)
         (os  << c.Immaginaria) << "i";
     else if (c.Immaginaria==0)
         os << c.Reale;
-    else
+    else if (c.Immaginaria>0)
         (((os << c.Reale) << "+") << c.Immaginaria) << "i";
+    else
+        ((os << c.Reale) << c.Immaginaria) << "i";
     return os;
 }
 
